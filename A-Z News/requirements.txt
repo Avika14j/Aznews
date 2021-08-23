@@ -105,7 +105,6 @@ python-dateutil==2.8.1
 python-decouple==3.3
 pyttsx3==2.90
 
-pywin32==227
 pywin32-ctypes==0.2.0
 qrcode==6.1
 query-string==2019.4.13
