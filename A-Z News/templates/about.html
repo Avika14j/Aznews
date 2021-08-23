@@ -1,0 +1,110 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block extraheader %}
+<!-- Page Header -->
+<div class="page-header">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10">
+				<ul class="page-header-breadcrumb">
+					<li><a href="index.html">Home</a></li>
+					<li>About Us</li>
+				</ul>
+				<h1>About Us</h1>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /Page Header -->
+{% endblock %}
+{% block content %}
+<!-- section -->
+<div class="section">
+	<!-- container -->
+	<div class="container">
+		<!-- row -->
+		<div class="row">
+			<div class="col-md-8">
+				<div class="section-row">
+					<p>AZNews.com founded in 2021 is India’s leading English News Portal with the aim of reaching
+						millions of Indians in India and significantly worldwide Indian Diaspora who are eager to stay
+						in touch with India based news and stories in Hindi because of the varied contents presented in
+						an eye pleasing design format. It has taken a prominent position in the web market and quickly
+						progressing to capture the top slot. We also remain clung to the tree of journalistic ethics by
+						serving the fresh news on the platter of absolute authenticity and our comments stand only as a
+						guard so that all the users of our portal do not carried away from the truth.
+
+						Our news persons are prompt in responding to any event by collecting first hand data. Personal
+						interviews of concerned people of that event or incident reinforce the fabric of the information
+						not to say our questionnaires are very yielding.</p>
+					<figure class="figure-img">
+						<img class="img-responsive" src="{% static 'img/about-01.jpg' %}" alt="Cover Photo">
+					</figure>
+					<p>Vix mollis admodum ei, vis legimus voluptatum ut, vis reprimique efficiendi sadipscing ut. Eam ex
+						animal assueverit consectetuer, et nominati maluisset repudiare nec. Rebum aperiam vis ne, ex
+						summo aliquando dissentiunt vim. Quo ut cibo docendi. Suscipit indoctum ne quo, ne solet
+						offendit hendrerit nec. Case malorum evertitur ei vel.</p>
+				</div>
+				<div class="row section-row">
+					<div class="col-md-6">
+						<figure class="figure-img">
+							<img class="img-responsive" src="{% static 'img/about-2.jpg' %}" alt="">
+						</figure>
+					</div>
+					<div class="col-md-6">
+						<h3>Our Mission</h3>
+						<p>Our mission of helping you make the best decisions is our north star, guiding us to always
+							serve your interests. It drives everything we do. And although we are a nearly 90-year-old
+							company, we’ve been a leader in digital journalism for more than a decade. We operate with
+							the mentality of a startup, stressing a flat management structure and a team-based operating
+							approach.</p>
+						<ul class="list-style">
+							<li>
+								<p>Vix mollis admodum ei, vis legimus voluptatum ut.</p>
+							</li>
+							<li>
+								<p>Cu cum alia vide malis. Vel aliquid facilis adolescens.</p>
+							</li>
+							<li>
+								<p>Laudem rationibus vim id. Te per illum ornatus.</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- aside -->
+			<div class="col-md-4">
+				<!-- ad -->
+				<div class="aside-widget text-center">
+					<a href="#" style="display: inline-block;margin: auto;">
+						<img class="img-responsive" src="{% static 'img/ad-01.jpg' %}" alt="Add Image">
+					</a>
+				</div>
+				<!-- /ad -->
+
+				<!-- post widget -->
+				<div class="aside-widget">
+					<div class="section-title">
+						<h2>Most Read</h2>
+					</div>
+					{% for post in most_read_post %}
+					<div class="post post-widget">
+						<a class="post-img" href="{% url 'blog-post' post.id %}"><img src="{{ post.image.url }}"
+								alt=""></a>
+						<div class="post-body">
+							<h3 class="post-title"><a href="{% url 'blog-post' post.id %}">{{ post.title }}</a></h3>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+				<!-- /post widget -->
+			</div>
+			<!-- /aside -->
+		</div>
+		<!-- /row -->
+	</div>
+	<!-- /container -->
+</div>
+<!-- /section -->
+{% endblock %}
