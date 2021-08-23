@@ -26,7 +26,7 @@ SECRET_KEY = 'a%jladi2qqpsj5*g*ewzs#b9yokz_7_b(1$ma!s7pfsecoz&pt'
 DEBUG = True
 
 #ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1','aznews.herokuapp.com/']
 
 
 
