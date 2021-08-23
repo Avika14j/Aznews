@@ -94,7 +94,7 @@ pylint==2.5.3
 PyMySQL==1.0.2
 pyparsing==2.4.6
 PyPDF2==1.26.0
-pypiwin32==223
+
 pypng==0.0.20
 PyQRCode==1.2.1
 pyquery==1.4.1
